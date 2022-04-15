@@ -13,6 +13,10 @@ public class WordCount {
         this.inputString = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
     }
 
+    public Integer getCharCount() {
+        return this.inputString.length();
+    }
+
     public Integer getWordCount(){
         if(isInputStringEmpty()){
             return 0;

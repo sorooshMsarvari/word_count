@@ -30,13 +30,6 @@ public class WordCountTest {
         inputFileStream.close();
     }
 
-    @Test
-    public void testEmptyStringReturnsZero() {
-        var wordCount = new WordCount("");
-        Integer expectedCount = 0;
-        assertEquals(expectedCount, wordCount.getWordCount());
-    }
-
     private String makeTestFileAndGetPath(String testString) throws IOException {
         final String FILE_LOCATION = "src/test/java/testFile.txt";
         File fileObj = new File(FILE_LOCATION);
@@ -45,5 +38,20 @@ public class WordCountTest {
         writer.write(testString);
         writer.close();
         return FILE_LOCATION;
+    }
+
+    @Test
+    public void testEmptyStringReturnsZero() {
+        var wordCount = new WordCount("");
+        Integer expectedCount = 0;
+        assertEquals(expectedCount, wordCount.getWordCount());
+    }
+
+    @Test
+    public void testGetCharCount() {
+        String testStr = "hello this is a test";
+        Integer expectedCharCount = 20;
+        var wordCount = new WordCount(testStr);
+        assertEquals(expectedCharCount, wordCount.getCharCount());
     }
 }
