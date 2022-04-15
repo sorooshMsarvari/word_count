@@ -3,6 +3,7 @@ import org.junit.Test;
 import word_count.WordCount;
 
 import java.io.*;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 
@@ -13,8 +14,8 @@ public class WordCountTest {
     public void testSimpleWordCount() {
         String testStr = "hello this is a test";
         Integer testWordCount = 5;
-        WordCount unitUnderTest = new WordCount(testStr);
-        assertEquals(testWordCount, unitUnderTest.getWordCount());
+        WordCount wordCount = new WordCount(testStr);
+        assertEquals(testWordCount, wordCount.getWordCount());
     }
 
     @Test
@@ -24,9 +25,16 @@ public class WordCountTest {
         var filePath = makeTestFileAndGetPath(testStr);
         FileInputStream inputFileStream = new FileInputStream(filePath);
 
-        WordCount unitUnderTest = new WordCount(inputFileStream);
-        assertEquals(testWordCount, unitUnderTest.getWordCount());
+        WordCount wordCount = new WordCount(inputFileStream);
+        assertEquals(testWordCount, wordCount.getWordCount());
         inputFileStream.close();
+    }
+
+    @Test
+    public void testEmptyStringReturnsZero() {
+        var wordCount = new WordCount("");
+        Integer expectedCount = 0;
+        assertEquals(expectedCount, wordCount.getWordCount());
     }
 
     private String makeTestFileAndGetPath(String testString) throws IOException {
