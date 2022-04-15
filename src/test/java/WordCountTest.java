@@ -4,6 +4,7 @@ import word_count.WordCount;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 import static org.junit.Assert.*;
@@ -20,10 +21,11 @@ public class WordCountTest {
     }
 
     @Test
-    public void testSimpleReadFromFile() throws FileNotFoundException {
-        InputStream inputFileStream = new FileInputStream("testFile.txt");
+    public void testSimpleReadFromFile() throws IOException {
+        InputStream inputFileStream = new FileInputStream("src/test/java/testFile.txt");
         Integer testWordCount = 5;
         WordCount unitUnderTest = new WordCount(inputFileStream);
         assertEquals(testWordCount, unitUnderTest.getWordCount());
+        inputFileStream.close();
     }
 }

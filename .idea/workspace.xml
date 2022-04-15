@@ -41,7 +41,26 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.WordCountTest">
+    <configuration name="WordCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="word_count" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCountTest.testSimpleReadFromFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="word_count" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="METHOD_NAME" value="testSimpleReadFromFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordCountTest.testSimpleWordCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="word_count" />
       <option name="PACKAGE_NAME" value="" />
@@ -54,6 +73,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WordCountTest" />
+        <item itemvalue="JUnit.WordCountTest.testSimpleReadFromFile" />
         <item itemvalue="JUnit.WordCountTest.testSimpleWordCount" />
       </list>
     </recent_temporary>
