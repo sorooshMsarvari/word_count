@@ -14,6 +14,13 @@ public class WordCount {
     }
 
     public Integer getWordCount(){
+        if(isInputStringEmpty()){
+            return 0;
+        }
         return this.inputString.split("\\s+").length;
+    }
+
+    private Boolean isInputStringEmpty(){
+        return inputString == "" || inputString == null;
     }
 }
